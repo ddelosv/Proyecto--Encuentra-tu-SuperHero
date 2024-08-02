@@ -1,14 +1,3 @@
-// API https://www.superheroapi.com/api.php/39061931e847500796f4d24baba2ee82/
-
-//9.- Crear una función para mostrar alertas cuando existan errores en la búsqueda.
-
-//10.- Crear una función para mostrar alertas cuando existan errores en la renderización.
-
-//11.- Crear una función para mostrar alertas cuando existan errores en la consulta.
-
-//12.- Crear una función para mostrar alertas cuando existan errores en la renderización.
-
-// contenido script
 $(function () {
   $("#btn").click(function () {
     //boton de busqueda
@@ -46,8 +35,8 @@ $(function () {
     scale: [0, 1],
     duration: 1000,
     easing: "easeOutExpo",
-  }); 
-  
+  });
+
   function renderHero(hero) {
     //funcion para mostrar informacion de superheroe, uso de cards de bootstrap y  mostrar grafico de canvasjs
     let heroHtml = `

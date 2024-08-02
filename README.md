@@ -18,6 +18,6 @@ Este proyecto es un sitio web que permite buscar información sobre superhéroes
 - **CanvasJS**: Para la creación de gráficos interactivos.
 - **JavaScript**: Para la lógica del cliente y la interacción con la API.
 
-## screenshot del proyecto
+## Captura de pantalla del proyecto
 
-![screenshot](./assets/img/screenshot.png)
+![captura de pantalla](./assets/img/screenshot.png)
