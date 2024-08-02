@@ -46,11 +46,11 @@ $(function () {
     scale: [0, 1],
     duration: 1000,
     easing: "easeOutExpo",
-  });
-
+  }); 
+  
   function renderHero(hero) {
     //funcion para mostrar informacion de superheroe, uso de cards de bootstrap y  mostrar grafico de canvasjs
-    let heroHtml = `<p id="title" class="fw-bold fs-3">SuperHero Encontrado</p>
+    let heroHtml = `
             <div class="col-md-6">
                 <div class="card mb-3">
                     <div class="row no-gutters">
@@ -61,6 +61,7 @@ $(function () {
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
+                                <p id="title" class="fw-bold fs-3">SuperHero Encontrado</p>
                                 <h5 class="card-title">${hero.name}</h5>
                                 <p class="card-text"><strong>Conexiones:</strong> ${
                                   hero.connections["group-affiliation"]
@@ -88,7 +89,7 @@ $(function () {
                     </div>
                 </div>
             </div>
-          <div class="col-md-6" id="chartContainer" style="height: 370px; width: 50%;"></div>
+          <div class="col-md-6 mt-2" id="chartContainer" style="height: 370px; width: 50%;"></div>
         `;
     $("#Hero-Info").html(heroHtml);
     renderHeroChart(hero);
@@ -122,7 +123,7 @@ $(function () {
       animationEnabled: true,
       title: {
         text: `Estadísticas de poder para ${hero.name}`,
-        fontFamily: "Bangers"
+        fontFamily: "Bangers",
       },
       data: [
         {
