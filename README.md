@@ -20,4 +20,4 @@ Este proyecto es un sitio web que permite buscar información sobre superhéroes
 
 ## Captura de pantalla del proyecto
 
-![captura de pantalla](./assets/img/screenshot.png)
+![captura de pantalla](/assets/img/Screenshot.png)
