@@ -82,6 +82,12 @@ $(function () {
         `;
     $("#Hero-Info").html(heroHtml);
     renderHeroChart(hero);
+    // si superhero no tiene estadisticas imprimir en #chartContainer una alerta
+    if (hero.powerstats.intelligence === "null") {
+      $("#chartContainer").html(
+        '<div class="alert alert-warning fw-bold" role="alert">Lamentablemente no hay estadísticas de poder para este SuperHero.( ˘︹˘ )</div>'
+      );
+    }
   }
 
   function renderHeroChart(hero) {
@@ -124,6 +130,7 @@ $(function () {
         },
       ],
     });
+    
     chart.render();
   }
 });
