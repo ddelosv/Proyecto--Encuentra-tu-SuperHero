@@ -1,4 +1,4 @@
-# :superhero: Desafio - Prueba final módulo 4 - Encuentra tu superhéroe
+# :superhero: Desafio - Encuentra tu superhéroe
 
 Este proyecto es un sitio web que permite buscar información sobre superhéroes utilizando la API de SuperHero. El sitio muestra detalles del superhéroe y un gráfico de habilidades.
 
@@ -27,3 +27,7 @@ Este proyecto es un sitio web que permite buscar información sobre superhéroes
 ## Captura de pantalla del proyecto
 
 ![captura de pantalla](/assets/img/Screenshot.png)
+
+## :copyright: datos obtenidos mediante la API
+
+- **superhero api:** <https://superheroapi.com/>
