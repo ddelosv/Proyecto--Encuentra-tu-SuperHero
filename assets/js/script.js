@@ -8,8 +8,8 @@ $(function () {
       alert("Por favor, ingresa un número válido");
       return;
       // Validar que el número sea entre 0 y 731
-    } else if (heroId < 0 || heroId > 731) {
-      alert("Por favor, ingresa un número entre 0 y 731");
+    } else if (heroId <= 1 || heroId > 731) {
+      alert("Por favor, ingresa un número entre 1 y 731");
       return;
     }
 
