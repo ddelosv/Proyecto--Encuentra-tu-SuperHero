@@ -7,12 +7,12 @@ $(function () {
     if (!/^\d+$/.test(heroId)) {
       alert("Por favor, ingresa un número válido");
       return;
-      // Validar que el número sea entre 0 y 731
+      // Validar que el número sea entre 1 y 731
     } else if (heroId <= 1 || heroId > 731) {
       alert("Por favor, ingresa un número entre 1 y 731");
       return;
     }
-
+   
     // Consultar la API de SuperHero
     $.ajax({
       url: `https://www.superheroapi.com/api.php/39061931e847500796f4d24baba2ee82/${heroId}`,
@@ -130,7 +130,49 @@ $(function () {
         },
       ],
     });
-    
+
     chart.render();
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const apiUrl =
+    "https://www.superheroapi.com/api.php/39061931e847500796f4d24baba2ee82/";
+
+  // Generar un array con IDs del 1 al 731
+  const heroIds = Array.from({ length: 731 }, (_, i) => i + 1);
+
+  // Promesas para obtener cada superhéroe
+  const heroPromises = heroIds.map((id) =>
+    fetch(apiUrl + id).then((response) => response.json())
+  );
+
+  // Espera a que todas las promesas se resuelvan
+  Promise.all(heroPromises)
+    .then((heroes) => {
+      renderHeroTable(heroes);
+    })
+    .catch((error) => console.error("Error fetching superhero data:", error));
+});
+
+function renderHeroTable(heroes) {
+  let heroRows = ""; 
+
+  heroes.forEach((hero) => {
+    let heroRow = `
+          <tr>
+              <td>${hero.id}</td>
+              <td>${hero.name}</td>
+          </tr>
+      `;
+    heroRows += heroRow; // Acumular las filas
+  });
+
+  // se imprime la tabla con los superhéroes en #superheroTable (modal)
+  document.getElementById("superheroTable").innerHTML = heroRows;
+}
+
+// script para habilitación de modal.
+$(".trigger-text").on("click", function () {
+  $("#myModal").modal("show");
 });

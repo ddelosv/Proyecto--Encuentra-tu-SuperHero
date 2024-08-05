@@ -51,19 +51,51 @@
     <form class="mb-3">
         <div class="container mt-4">
             <div class="input-group">
-                <input type="number" class="form-control" id="form" maxlength="3"
+                <input type="number" class="form-control" id="form" max="731" min="1" maxlength="3"
                     placeholder="Ingresa el numero de tu superheroe a buscar">
 
-                <div class="input-group-append">
+                <div class=" btn-group input-group-append" aria-label="grupo de botones">
                     <button class="btn btn-outline-secondary" type="button" id="btn">
                         <i class="fas fa-search"></i>
                     </button>
+                    <!-- boton que nos muestra la lista de superheroe a traves de un modal -->
+                    <button class="btn btn-outline-secondary" type="button" id="btn2" data-bs-toggle="modal"
+                        data-bs-target="#exampleModalScrollable">lista</button>
                 </div>
 
 
             </div>
         </div>
     </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" aria-labelledby="Table.hero" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-white text-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Table-hero">Lista de Superheroes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#ID</th>
+                                <th>Character Name</th>
+                            </tr>
+                        </thead>
+                        <tbody id="superheroTable">
+                            <!-- Las filas de héroes serán insertadas aquí -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal hasta aqui -->
 
     <!-- main seccion con la informacion del superheroe -->
     <main class="container">
@@ -76,8 +108,8 @@
 
 
     <footer class="mt-5">
-        <p>© 2024 Encuentra tu SuperHero Chile. datos obtenidos de https://superheroapi.com. sitio diseñado por <a target="_blank"
-                href="https://github.com/ddelosv">Diego de los Santos</a></p>
+        <p>© 2024 Encuentra tu SuperHero Chile. datos obtenidos de https://superheroapi.com. sitio diseñado por <a
+                target="_blank" href="https://github.com/ddelosv">Diego de los Santos</a></p>
     </footer>
 
 
